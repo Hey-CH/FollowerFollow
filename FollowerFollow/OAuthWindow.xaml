@@ -1,0 +1,21 @@
+﻿<Window x:Class="FollowerFollow.OAuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FollowerFollow"
+        mc:Ignorable="d"
+        Title="認証ウィンドウ" Height="162.333" Width="200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <TextBox  Grid.Row="0" TextWrapping="WrapWithOverflow" IsReadOnly="True" Text="認証を押した後ブラウザで承認し、PINコードを設定してください。"/>
+        <Button Grid.Row="1" Content="認証" Click="Button_Click"/>
+        <TextBox Grid.Row="2" Text="{Binding PINCode,UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Grid.Row="3" Content="設定" Click="Button_Click_1"/>
+    </Grid>
+</Window>
